@@ -3,11 +3,10 @@
 #  CodeSnippet
 #
 #  Created by Watson on 11/09/24.
-#  Copyright 2011年 __MyCompanyName__. All rights reserved.
 #
 
 class GradientView < NSView
-  
+
   def initWithFrame(frame)
     if super
       top = NSColor.colorWithCalibratedWhite(240.0/255.0, alpha:1.0)
@@ -17,7 +16,7 @@ class GradientView < NSView
     end
     return self
   end
-  
+
   def drawRect(rect)
     # draw gradient
     @gradient.drawInRect(rect, angle:270)
@@ -32,7 +31,6 @@ class GradientView < NSView
 
     NSColor.grayColor.set
     NSBezierPath.strokeLineFromPoint(startLine, toPoint:endLine)
-    
   end
 
 end

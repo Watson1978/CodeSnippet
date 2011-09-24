@@ -3,13 +3,12 @@
 #  CodeSnippet
 #
 #  Created by Watson on 11/09/24.
-#  Copyright 2011年 __MyCompanyName__. All rights reserved.
 #
 
 class EditController
   attr_accessor :delegate
   attr_accessor :entity
-  
+
   # outlet
   attr_accessor :window
   attr_accessor :title
@@ -31,11 +30,11 @@ class EditController
     window.makeKeyAndOrderFront(nil)
     reset
   end
-  
+
   def editSnippet(entity)
     @entity = entity
     window.makeKeyAndOrderFront(nil)
-    
+
     title.stringValue = @entity.title
     body.string = @entity.body
     language.selectItemWithObjectValue(@entity.language)
@@ -50,11 +49,11 @@ class EditController
       @entity.language = language.itemObjectValueAtIndex(index)
     end
     @entity.language ||= "Other"
-    
+
     time = Time.now
     @entity.create ||= time
     @entity.update = time
-    
+
     delegate.saveSnippet
     reset
   end
