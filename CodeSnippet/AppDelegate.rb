@@ -76,10 +76,14 @@ class AppDelegate
     saveAction(nil)
 
     # reload WebView
-    tableViewSelectionDidChange(nil)
+    loadSnippet
   end
 
   def tableViewSelectionDidChange(aNotification)
+    loadSnippet
+  end
+  
+  def loadSnippet
     selectedEntity do |entity|
       codeTitle.stringValue = entity.title
       codeLanguage.stringValue = entity.language
