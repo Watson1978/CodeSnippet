@@ -22,15 +22,11 @@ class GradientView < NSView
     @gradient.drawInRect(rect, angle:270)
 
     # draw bottom-edge line
-    startLine = NSPoint.new
-    startLine.x = 0
-    startLine.y = 0
-    endLine = NSPoint.new
-    endLine.x = rect.size.width
-    endLine.y = 0
+    from = NSMakePoint(0, 0)
+    to   = NSMakePoint(rect.size.width, 0)
 
     NSColor.grayColor.set
-    NSBezierPath.strokeLineFromPoint(startLine, toPoint:endLine)
+    NSBezierPath.strokeLineFromPoint(from, toPoint:to)
   end
 
 end
