@@ -36,27 +36,40 @@ class AppDelegate
   end
 
   def newSnippet(sender)
-    entity = NSEntityDescription.insertNewObjectForEntityForName("Snippet", inManagedObjectContext:managedObjectContext)
-    editController.newSnippet(entity)
+    makeEntity do |entity|
+      editController.newSnippet(entity)
+    end
   end
 
   def editSnippet(sender)
-    entity = arrayController.selectedObjects.last
-    editController.editSnippet(entity)
+    selectedEntity do |entity|
+      editController.editSnippet(entity)
+    end
   end
 
   def copySnippet(sender)
-    entity = arrayController.selectedObjects.last
-    return if entity.nil?
-
-    pboard = NSPasteboard.generalPasteboard
-    pboard.declareTypes([NSStringPboardType], owner:nil)
-    pboard.setString(entity.body, forType:NSStringPboardType)
+    selectedEntity do |entity|
+      pboard = NSPasteboard.generalPasteboard
+      pboard.declareTypes([NSStringPboardType], owner:nil)
+      pboard.setString(entity.body, forType:NSStringPboardType)
+    end
   end
 
   def deleteSnippet(sender)
+    selectedEntity do |entity|
+      managedObjectContext.deleteObject(entity)
+    end
+  end
+  
+  def makeEntity
+    entity = NSEntityDescription.insertNewObjectForEntityForName("Snippet", inManagedObjectContext:managedObjectContext)
+    yield entity
+  end
+  
+  def selectedEntity
     entity = arrayController.selectedObjects.last
-    managedObjectContext.deleteObject(entity)
+    return if entity.nil?
+    yield entity
   end
 
   def saveSnippet
@@ -67,19 +80,17 @@ class AppDelegate
   end
 
   def tableViewSelectionDidChange(aNotification)
-    entity = arrayController.selectedObjects.last
-    return if entity.nil?
+    selectedEntity do |entity|
+      codeTitle.stringValue = entity.title
+      codeLanguage.stringValue = entity.language
 
-    codeTitle.stringValue = entity.title
-    codeLanguage.stringValue = entity.language
+      res_path = NSBundle.mainBundle.resourcePath
+      nsurl = NSURL.URLWithString(res_path)
 
-    res_path = NSBundle.mainBundle.resourcePath
-    nsurl = NSURL.URLWithString(res_path)
-
-    snippet_body = escape(entity.body)
-    brush = BRUSHES[entity.language]
-    brush ||= {'brush' => 'text', 'brushFile' => 'shBrushPlain.js'}
-    html =<<"EOS"
+      snippet_body = escape(entity.body)
+      brush = BRUSHES[entity.language]
+      brush ||= {'brush' => 'text', 'brushFile' => 'shBrushPlain.js'}
+      html =<<"EOS"
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -96,7 +107,8 @@ class AppDelegate
 </body>
 </html>
 EOS
-    webView.mainFrame.loadHTMLString(html, baseURL:nsurl)
+      webView.mainFrame.loadHTMLString(html, baseURL:nsurl)
+    end
   end
 
   def escape(string)
@@ -106,6 +118,7 @@ EOS
     str.gsub!(/>/, '&gt;')
     return str
   end
+
   # Persistence accessors
   attr_reader :persistentStoreCoordinator
   attr_reader :managedObjectModel
