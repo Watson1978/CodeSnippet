@@ -9,8 +9,8 @@ class ButtonBarView < NSView
 
   def initWithFrame(frame)
     if super
-      top = NSColor.colorWithCalibratedWhite(253.0/255.0, alpha:1.0)
-      bottom = NSColor.colorWithCalibratedWhite(243.0/255.0, alpha:1.0)
+      top = NSColor.colorWithCalibratedWhite(250.0/255.0, alpha:1.0)
+      bottom = NSColor.colorWithCalibratedWhite(250.0/255.0, alpha:1.0)
       @gradient1 = NSGradient.alloc.initWithStartingColor(top, endingColor:bottom)
 
       top = NSColor.colorWithCalibratedWhite(230.0/255.0, alpha:1.0)
