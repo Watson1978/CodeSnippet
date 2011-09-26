@@ -779,7 +779,7 @@
 												<object class="NSButton" id="526943076">
 													<reference key="NSNextResponder" ref="1067917718"/>
 													<int key="NSvFlags">268</int>
-													<string key="NSFrame">{{0, -1}, {32, 24}}</string>
+													<string key="NSFrame">{{-1, -2}, {33, 23}}</string>
 													<reference key="NSSuperview" ref="1067917718"/>
 													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="879137496"/>
@@ -788,7 +788,7 @@
 													<object class="NSButtonCell" key="NSCell" id="888630492">
 														<int key="NSCellFlags">-2080244224</int>
 														<int key="NSCellFlags2">134217728</int>
-														<string key="NSContents">+</string>
+														<string key="NSContents"/>
 														<object class="NSFont" key="NSSupport">
 															<string key="NSName">LucidaGrande-Bold</string>
 															<double key="NSSize">12</double>
@@ -798,6 +798,10 @@
 														<reference key="NSControlView" ref="526943076"/>
 														<int key="NSButtonFlags">-2033434369</int>
 														<int key="NSButtonFlags2">162</int>
+														<object class="NSCustomResource" key="NSNormalImage">
+															<string key="NSClassName">NSImage</string>
+															<string key="NSResourceName">NSAddTemplate</string>
+														</object>
 														<string key="NSAlternateContents"/>
 														<string key="NSKeyEquivalent"/>
 														<int key="NSPeriodicDelay">400</int>
@@ -805,7 +809,7 @@
 													</object>
 												</object>
 											</object>
-											<string key="NSFrameSize">{303, 22}</string>
+											<string key="NSFrameSize">{303, 20}</string>
 											<reference key="NSSuperview" ref="623761938"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="526943076"/>
@@ -825,7 +829,7 @@
 														<object class="NSTableView" id="691040480">
 															<reference key="NSNextResponder" ref="1037686044"/>
 															<int key="NSvFlags">4352</int>
-															<string key="NSFrameSize">{303, 461}</string>
+															<string key="NSFrameSize">{303, 463}</string>
 															<reference key="NSSuperview" ref="1037686044"/>
 															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="54559288"/>
@@ -960,7 +964,7 @@
 															<int key="NSTableViewGroupRowStyle">1</int>
 														</object>
 													</object>
-													<string key="NSFrame">{{0, 17}, {303, 461}}</string>
+													<string key="NSFrame">{{0, 17}, {303, 463}}</string>
 													<reference key="NSSuperview" ref="56369263"/>
 													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="691040480"/>
@@ -1010,7 +1014,7 @@
 													<int key="NScvFlags">4</int>
 												</object>
 											</object>
-											<string key="NSFrame">{{0, 22}, {303, 478}}</string>
+											<string key="NSFrame">{{0, 20}, {303, 480}}</string>
 											<reference key="NSSuperview" ref="623761938"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="1001615103"/>
@@ -3511,11 +3515,13 @@ AAEAAQAAAT0AAwAAAAEAAgAAAVIAAwAAAAEAAQAAAVMAAwAAAAIAAQABAAAAAA</bytes>
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSArray" key="dict.sortedKeys">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>NSAddTemplate</string>
 				<string>NSMenuCheckmark</string>
 				<string>NSMenuMixedState</string>
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<string>{8, 8}</string>
 				<string>{9, 8}</string>
 				<string>{7, 2}</string>
 			</object>
