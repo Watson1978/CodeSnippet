@@ -20,6 +20,7 @@ class AppDelegate
     'CSS'         => {'brush' => 'css', 'brushFile' => 'shBrushCss.js'},
     'JavaScript'  => {'brush' => 'js', 'brushFile' => 'shBrushJScript.js'},
     'Ruby'        => {'brush' => 'ruby', 'brushFile' => 'shBrushRuby.js'},
+    'Python'      => {'brush' => 'python', 'brushFile' => 'shBrushPython.js'},
     'Perl'        => {'brush' => 'perl', 'brushFile' => 'shBrushPerl.js'},
     'C, C++'      => {'brush' => 'cpp', 'brushFile' => 'shBrushCpp.js'},
     'Objective-C' => {'brush' => 'cpp', 'brushFile' => 'shBrushCpp.js'},
