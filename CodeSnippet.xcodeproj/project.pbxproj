@@ -64,6 +64,7 @@
 		A9AF88DA142DC17A00E19E75 /* shLegacy.js in Resources */ = {isa = PBXBuildFile; fileRef = A9AF886C142DC10000E19E75 /* shLegacy.js */; };
 		A9BB30E1142CDB9600DC39E8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BB30E0142CDB9600DC39E8 /* WebKit.framework */; };
 		A9C348AA142FA64700F3FB10 /* ButtonBarView.rb in Resources */ = {isa = PBXBuildFile; fileRef = A9C348A9142FA64700F3FB10 /* ButtonBarView.rb */; };
+		A9D5294114C3873400EF1BE0 /* CodeSnippet.icns in Resources */ = {isa = PBXBuildFile; fileRef = A9D5294014C3873400EF1BE0 /* CodeSnippet.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		A9AF887E142DC10000E19E75 /* shThemeRDark.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shThemeRDark.css; sourceTree = "<group>"; };
 		A9BB30E0142CDB9600DC39E8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = ../../../../System/Library/Frameworks/WebKit.framework; sourceTree = "<group>"; };
 		A9C348A9142FA64700F3FB10 /* ButtonBarView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ButtonBarView.rb; sourceTree = "<group>"; };
+		A9D5294014C3873400EF1BE0 /* CodeSnippet.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CodeSnippet.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		A933F7BA142CCB8A00F093F6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9D5294014C3873400EF1BE0 /* CodeSnippet.icns */,
 				A933F7BB142CCB8A00F093F6 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -457,6 +460,7 @@
 				A9AF88BE142DC10000E19E75 /* shThemeRDark.css in Resources */,
 				A91250AD142DF8020076BDF0 /* GradientView.rb in Resources */,
 				A9C348AA142FA64700F3FB10 /* ButtonBarView.rb in Resources */,
+				A9D5294114C3873400EF1BE0 /* CodeSnippet.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
