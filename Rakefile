@@ -11,6 +11,7 @@ task :embed do
   sh "xcodebuild -target Deployment"
 end
 
+desc "Make #{APP_NAME}.dmg"
 task :dmg => [:clean, :embed] do
   sh "hdiutil create #{APP_NAME}.dmg -volname #{APP_NAME} -srcfolder build/Release/#{APP_NAME}.app"
 end
