@@ -1,6 +1,8 @@
 APP_NAME = "CodeSnippet"
 CONFIG   = "Release"
 
+task :default => :dmg
+
 desc "Build Application"
 task :build do
   sh "xcodebuild -target #{APP_NAME} -configuration #{CONFIG}"
