@@ -19,5 +19,5 @@ end
 desc "Clean building files"
 task :clean do
   sh "rm -rf build"
-  sh "rm #{APP_NAME}.dmg"
+  sh "rm -rf #{APP_NAME}.dmg"
 end
