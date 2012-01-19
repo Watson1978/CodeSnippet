@@ -25,6 +25,7 @@ class AppDelegate
     'C, C++'      => {'brush' => 'cpp', 'brushFile' => 'shBrushCpp.js'},
     'Objective-C' => {'brush' => 'cpp', 'brushFile' => 'shBrushCpp.js'},
     'Java'        => {'brush' => 'java', 'brushFile' => 'shBrushJava.js'},
+    'Shell'       => {'brush' => 'shell', 'brushFile' => 'shBrushBash.js'},
   }
 
   def applicationDidFinishLaunching(a_notification)
