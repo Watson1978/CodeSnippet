@@ -29,7 +29,8 @@ class AppDelegate
   }
 
   def applicationDidFinishLaunching(a_notification)
-    # Insert code here to initialize your application
+    arrayController.setSortDescriptors(
+        NSArray.arrayWithObject(NSSortDescriptor.alloc.initWithKey:"language", ascending:true))
     editController.delegate = self
   end
 
