@@ -13,7 +13,7 @@ CodeSnippet is your code snippet manager. This application is written by RubyMot
 
     $ git clone git://github.com/Watson1978/CodeSnippet.git
     $ cd CodeSnippet
-    $ macrake
+    $ rake
 
 ## LICENSE
 These works are available under the MIT license. See the [LICENSE](https://github.com/Watson1978/CodeSnippet/blob/master/LICENSE) file for more info.
