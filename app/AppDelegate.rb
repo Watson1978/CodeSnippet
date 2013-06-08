@@ -101,9 +101,9 @@ class AppDelegate
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="#{res_path}/shCore.js"></script>
-<script type="text/javascript" src="#{res_path}/#{brush['brushFile']}"></script>
-<link type="text/css" rel="stylesheet" href="#{res_path}/shCoreDefault.css">
+<script type="text/javascript" src="#{res_path}/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="#{res_path}/syntaxhighlighter/scripts/#{brush['brushFile']}"></script>
+<link type="text/css" rel="stylesheet" href="#{res_path}/syntaxhighlighter/styles/shCoreDefault.css">
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 <style type="text/css">
 .toolbar { display: none !important;}
